@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Documentation from './components/Documentation';
+import MainGame from './components/MainGame';
 
 class App extends React.Component {
   state = { currentPage: 0 }
 
-  switchBack = () => { this.setState({currentPage: 0}); }
-  switchToDocs = () => { this.setState({currentPage: 1}); }
+  switchToPage = page => { this.setState({currentPage: page}); }
 
   render() {
     const { currentPage } = this.state;
@@ -15,7 +15,7 @@ class App extends React.Component {
       displayPage = (
         <div>
           <div className="mobile-title text-center">
-            JUST ANOTHER RP REACT GAME
+            JARP REACT GAME
           </div>
           <p>
             This is just a to test out 2 features that I wanted to implement.
@@ -28,12 +28,14 @@ class App extends React.Component {
             The game will work either by loading up local information or retrieving the
             information for the game via a remote server.
           </p>
-          <button className="btn btn-main">START GAME</button>
-          <button className="btn btn-ghost" onClick={this.switchToDocs}>DOCUMENTATION</button>
+          <button className="btn btn-main" onClick={() => this.switchToPage(2)}>START GAME</button>
+          <button className="btn btn-ghost" onClick={() => this.switchToPage(1)}>DOCUMENTATION</button>
         </div>
       );
     } else if ( currentPage === 1 ) {
-      displayPage = <Documentation back={this.switchBack} />;
+      displayPage = <Documentation back={() => this.switchToPage(0)} />;
+    } else if ( currentPage === 2 ) {
+      displayPage = <MainGame />;
     }
     return <div className="application">{displayPage}</div>;
   }
