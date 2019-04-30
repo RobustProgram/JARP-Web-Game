@@ -1,0 +1,55 @@
+@import "./utilities/mixins";
+@import "./base/text";
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700');
+
+html, body {
+  font-family: 'Nunito', sans-serif;
+  // Set the document to fit screen
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+#root {
+  // Responsive breakpoints
+  @include breakpoint(lg) {
+    @include gradient(rgb(218, 210, 153), rgb(176, 218, 185), "horizontal");
+    // Center the application window.
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // Make it fit the screen
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.application {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  // Responsive breakpoints
+  @include breakpoint(lg) {
+    width: 90%;
+    min-height: 90%;
+  }
+}
+
+.btn {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Nunito', sans-serif;
+  padding: 5px;
+  margin: 5px 0px;
+  width: 100%;
+  &.btn-main {
+    color: white;
+    border: 2px solid rgb(43,87,151);
+    background-color: rgb(45,137,239);
+  }
+  &.btn-ghost {
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
