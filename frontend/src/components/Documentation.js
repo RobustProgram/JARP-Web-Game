@@ -1,3 +1,7 @@
+/*
+ * This panel will hold the documentations and will act as the
+ * main panel to bind all of the sub panels.
+ */
 import React from 'react';
 
 import Intro from './documentation/Intro';

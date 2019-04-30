@@ -1,9 +1,19 @@
+/*
+ * The main page of the website. This will act as the 'router' as it will be used to
+ * help display the different panels.
+ */
 import React from 'react';
 
 import Documentation from './components/Documentation';
 import MainGame from './components/MainGame';
 
 class App extends React.Component {
+  /*
+   * The page index will determine which panel is shown to the user.
+   * Panel 0 will show the front page.
+   * Panel 1 will show the documentation pages.
+   * Panel 2 will show the game itself.
+   */
   state = { currentPage: 0 }
 
   switchToPage = page => { this.setState({currentPage: page}); }
@@ -28,8 +38,12 @@ class App extends React.Component {
             The game will work either by loading up local information or retrieving the
             information for the game via a remote server.
           </p>
-          <button className="btn btn-main" onClick={() => this.switchToPage(2)}>START GAME</button>
-          <button className="btn btn-ghost" onClick={() => this.switchToPage(1)}>DOCUMENTATION</button>
+          <button className="btn btn-main" onClick={() => this.switchToPage(2)}>
+            START GAME
+          </button>
+          <button className="btn btn-ghost" onClick={() => this.switchToPage(1)}>
+            DOCUMENTATION
+          </button>
         </div>
       );
     } else if ( currentPage === 1 ) {
