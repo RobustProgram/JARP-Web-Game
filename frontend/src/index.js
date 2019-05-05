@@ -6,12 +6,14 @@ import * as serviceWorker from './serviceWorker';
 import { combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
 import manifestReducer from './components/redux-reducers/manifest-reducer';
+import optionsReducer from './components/redux-reducers/options-reducer';
 
 // Import theme styles
 import "./styles/theme.scss";
 
 const allReducers = combineReducers({
-  manifest: manifestReducer
+  manifest: manifestReducer,
+  options: optionsReducer
 });
 
 const store = createStore(allReducers);

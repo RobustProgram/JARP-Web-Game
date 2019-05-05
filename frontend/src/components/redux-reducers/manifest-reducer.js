@@ -1,7 +1,9 @@
 import { UPDATE_MANIFEST } from '../redux-actions/manifest-action';
 
 const initialManifest = {
-  options: ""
+  options: "",
+  loaded: false,
+  baseUrl: ""
 };
 
 export default function manifestReducer(state = initialManifest, {type, payload}) {
