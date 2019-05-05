@@ -2,6 +2,7 @@ import { UPDATE_MANIFEST } from '../redux-actions/manifest-action';
 
 const initialManifest = {
   options: "",
+  start: "",
   loaded: false,
   baseUrl: ""
 };

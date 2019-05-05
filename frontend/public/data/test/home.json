@@ -1,0 +1,14 @@
+{
+  "id" : "home",
+  "description" : "This is the area you start!",
+  "inventory" : [
+    {
+      "name" : "money",
+      "amount" : 150
+    }
+  ],
+  "locations" : [
+    {
+    }
+  ]
+}
