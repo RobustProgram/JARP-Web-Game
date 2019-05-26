@@ -1,5 +1,6 @@
 {
   "id" : "home",
+  "name" : "JOHNNY'S HOME",
   "description" : "This is the area you start!",
   "inventory" : [
     {
@@ -7,8 +8,46 @@
       "amount" : 150
     }
   ],
-  "locations" : [
-    {
+  "start-location" : "bedroom-wake-up",
+  "locations" : {
+    "bedroom-wake-up" : { "name":"",
+      "description": [
+        "You hear your alarm bell ringing, telling you to get your fatass up to start the day.",
+        "The sun is pouring through the curtains, reminding you why you hate Mondays.",
+        "Stupid mondays, always ruining the day for the hard worker."
+      ],
+      "move-options" : ["bedroom-get-out", "ignore-alarm", "smash-alarm"]
+    },
+    "bedroom-get-out" : { "name":"Get out of bed.",
+      "description": [
+        "As you force your fat ass out of the bed. Your feet touch the chilly wooden floor.",
+        "The chill sends feelings up your bendy bue. Igniting the fire inside of you.",
+        "You march towards the bathroom for your ... morning ... routine."
+      ],
+      "move-options" : ["bathroom-morning"]
+    },
+    "bathroom-morning" : { "name":"Enter bathroom.",
+      "description": [
+        "Final panel test."
+      ],
+      "move-options" : []
+    },
+
+    "ignore-alarm" : {  "name" : "Ignore the alarm.",
+      "description" : [
+        "You ignore the sound of the alarm smashing its music into your ears.",
+        "You drift off into sleep, thinking about the dream you had last night of the hot girl in your class.",
+        "You start to think about what you want to do to get this hot girl."
+      ],
+      "move-options" : []
+    },
+
+    "smash-alarm" : { "name" : "Smash the alarm.",
+      "description" : [
+        "Your pent-up anger is transformed into hulk like powers. The alarm is picked up and thrown to the ground.",
+        "It was annihilated in an instant, giving you a sense of control over the stupid electronic."
+      ],
+      "move-options" : []
     }
-  ]
+  }
 }

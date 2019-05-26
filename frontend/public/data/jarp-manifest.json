@@ -1,4 +1,5 @@
 {
   "options" : "./test/options.json",
-  "start" : "./test/home.json"
+  "start" : "./test/home.json",
+  "items-definition" : "./test/items.json"
 }

@@ -7,7 +7,8 @@ export function updateOptions(newOptions) {
       name: newOptions.name,
       description: newOptions.description,
       author: newOptions.author,
-      version: newOptions.version
+      version: newOptions.version,
+      loaded: newOptions.loaded
     }
   };
 }

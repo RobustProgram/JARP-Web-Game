@@ -6,6 +6,7 @@ import React from 'react';
 
 import Documentation from './components/Documentation';
 import MainGame from './components/MainGame';
+import Level from './components/Level';
 
 class App extends React.Component {
   /*
@@ -39,7 +40,7 @@ class App extends React.Component {
             information for the game via a remote server.
           </p>
           <button className="btn btn-main" onClick={() => this.switchToPage(2)}>
-            START GAME
+            LOAD GAME
           </button>
           <button className="btn btn-ghost" onClick={() => this.switchToPage(1)}>
             DOCUMENTATION
@@ -49,7 +50,9 @@ class App extends React.Component {
     } else if ( currentPage === 1 ) {
       displayPage = <Documentation back={() => this.switchToPage(0)} />;
     } else if ( currentPage === 2 ) {
-      displayPage = <MainGame />;
+      displayPage = <MainGame startLevel={() => this.switchToPage(3)} />;
+    } else if ( currentPage === 3 ) {
+      displayPage = <Level />;
     }
     return <div className="application">{displayPage}</div>;
   }

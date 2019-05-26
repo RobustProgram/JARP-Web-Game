@@ -3,17 +3,23 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import { toast } from 'react-toastify';
 import { combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
 import manifestReducer from './components/redux-reducers/manifest-reducer';
 import optionsReducer from './components/redux-reducers/options-reducer';
+import levelReducer from './components/redux-reducers/level-reducer';
 
 // Import theme styles
 import "./styles/theme.scss";
+import 'react-toastify/dist/ReactToastify.min.css';
+
+toast.configure();
 
 const allReducers = combineReducers({
   manifest: manifestReducer,
-  options: optionsReducer
+  options: optionsReducer,
+  level: levelReducer
 });
 
 const store = createStore(allReducers);

@@ -37,6 +37,12 @@ html, body {
   }
 }
 
+.loader-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .btn {
   border-radius: 25px;
   font-size: 14px;
@@ -53,8 +59,34 @@ html, body {
     border: 1px solid rgb(43,87,151);
     background-color: rgb(45,137,239);
   }
+  &.btn-move {
+    color: white;
+    text-align: left;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 1px solid rgb(11, 140, 0);
+    background-color: rgb(65, 186, 97);
+  }
   &.btn-ghost {
     border: 1px solid rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0);
   }
+  &.btn-small {
+    color: white;
+    text-align: left;
+    padding: 5px 20px;
+    border-radius: 5px;
+    width: auto;
+    border: 1px solid rgb(43,87,151);
+    background-color: rgb(45,137,239);
+  }
+  &:disabled {
+    border: 1px solid rgb(88, 88, 88);
+    background-color: rgb(99, 99, 99);
+  }
+}
+
+
+.level-panel {
+  padding: 30px;
 }
