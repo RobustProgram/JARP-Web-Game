@@ -1,0 +1,12 @@
+{
+  "money" : {
+    "icon_url" : "./icons/coins.png",
+    "description" : "You need this to survive!",
+    "max" : 999999
+  },
+  "basement_keys" : {
+    "icon_url" : "./icons/key.png",
+    "description" : "Keys need to open the door to the basement.",
+    "max" : 1
+  }
+}
